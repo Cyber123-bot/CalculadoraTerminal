@@ -26,3 +26,4 @@ This project is a simple Python calculator that performs various mathematical op
 
 ## Requirements
 - Python 3.x
+- os library (usually pre-installed with Python)

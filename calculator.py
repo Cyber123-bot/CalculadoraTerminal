@@ -1,4 +1,5 @@
 import style
+import os
 
 class Calculator:
     """
@@ -143,7 +144,10 @@ class Calculator:
         '''
         This function starts the calculator program and prompts the user to choose an operation
         '''
-        print(style.color.azul + "1. Add")
+        os.system('cls' if os.name == 'nt' else 'clear')  # Clear the terminal screen
+        print(style.color.azul + "\tWelcome to the Calculator Program!" + style.color.RESET)
+
+        print(style.color.cyan + "\n1. Add")
         print("2. Subtract")
         print("3. Divide")
         print("4. Multiply")
@@ -158,50 +162,84 @@ class Calculator:
         except ValueError:
             print(style.color.rojo + "\nInvalid input. Please enter a valid number between 1 and 8." + style.color.RESET)
             return
+        
+        except KeyboardInterrupt:
+            print(style.color.amarillo + "\nExiting the program..." + style.color.RESET)
+            return
 
-        calc = Calculator(self.__output)  # Create a new calculator object with the specified output text
+        calc = Calculator(style.color.orange + f"\n{self.__output}" + style.color.RESET)  # Create a new calculator object with the specified output text
 
         if response == 1:
             numers = []
-            num_count = int(input(style.color.purpura + "\nHow many numbers do you want to add? " + style.color.RESET))
+            try:
+                num_count = int(input(style.color.purpura + "\nHow many numbers do you want to add? " + style.color.RESET))
+            
+            except KeyboardInterrupt:
+                print(style.color.amarillo + "\nExiting the program..." + style.color.RESET)
+                return
+            
             print() # Add a new line for better readability
 
             for i in range(num_count):
                 try:
+                    print() # Add a new line for better readability
                     num = int(input(style.color.amarillo + f"Number {i+1}: " + style.color.RESET))  # Get user input for the numbers to add
-                    numers.append(num)
-
+                    
+                except KeyboardInterrupt:
+                    print(style.color.amarillo + "\nExiting the program..." + style.color.RESET)
+                    return
+                
                 except ValueError:
                     print(style.color.rojo + "\nInvalid input. Please enter a valid number." + style.color.RESET)
                     return
-        
+            
+                numers.append(num)
+
             calc.add(numers)  # Perform addition
 
         elif response == 2:
             numers = []
-            num_count = int(input(style.color.purpura + "\nHow many numbers do you want to subtract? " + style.color.RESET))
+            try:
+                num_count = int(input(style.color.purpura + "\nHow many numbers do you want to subtract? " + style.color.RESET))
+            
+            except KeyboardInterrupt:
+                print(style.color.amarillo + "\nExiting the program..." + style.color.RESET)
+                return
+            
             print() # Add a new line for better readability
 
             for i in range(num_count):
                 try:
+                    print() # Add a new line for better readability
                     num = int(input(style.color.amarillo + f"Number {i+1}: " + style.color.RESET))  # Get user input for the numbers to subtract
                     numers.append(num)
 
                 except ValueError:
                     print(style.color.rojo + "\nInvalid input. Please enter a valid number." + style.color.RESET)
                     return
+                
+                except KeyboardInterrupt:
+                    print(style.color.amarillo + "\nExiting the program..." + style.color.RESET)
+                    return
 
             calc.subtract(numers)  # Perform subtraction
 
         elif response == 3:
             try:
-                n1 = int(input(style.color.amarillo + "Dividend: " + style.color.RESET))
-                n2 = int(input(style.color.amarillo + "Divisor: " + style.color.RESET))
                 print() # Add a new line for better readability
-
-                if n2 == 0:
+                try:
+                    n1 = int(input(style.color.amarillo + "Dividend: " + style.color.RESET))
+                    n2 = int(input(style.color.amarillo + "Divisor: " + style.color.RESET))
+                
+                except KeyboardInterrupt:
+                    print(style.color.amarillo + "\nExiting the program..." + style.color.RESET)
+                    return
+                
+                except ZeroDivisionError:
                     print(style.color.rojo + "\nError: Cannot divide by zero." + style.color.RESET)
                     return
+                
+                print() # Add a new line for better readability
                 
             except ValueError:
                 print(style.color.rojo + "\nInvalid input. Please enter valid numbers." + style.color.RESET)
@@ -211,22 +249,34 @@ class Calculator:
 
         elif response == 4:
             numers = []
-            num_count = int(input(style.color.purpura + "\nHow many numbers do you want to multiply? " + style.color.RESET))
+            try:
+                num_count = int(input(style.color.purpura + "\nHow many numbers do you want to multiply? " + style.color.RESET))
+            
+            except KeyboardInterrupt:
+                print(style.color.amarillo + "\nExiting the program..." + style.color.RESET)
+                return
+            
             print() # Add a new line for better readability
 
             for i in range(num_count):
                 try:
+                    print() # Add a new line for better readability
                     num = int(input(style.color.amarillo + f"Number {i+1}: " + style.color.RESET))  # Get user input for the numbers to multiply
                     numers.append(num)
 
                 except ValueError:
                     print(style.color.rojo + "\nInvalid input. Please enter a valid number." + style.color.RESET)
                     return
+                
+                except KeyboardInterrupt:
+                    print(style.color.amarillo + "\nExiting the program..." + style.color.RESET)
+                    return
 
             calc.multiply(numers)  # Perform multiplication
 
         elif response == 5:
             try:
+                print() # Add a new line for better readability
                 n1 = int(input(style.color.amarillo + "\nNumber to calculate square root: " + style.color.RESET))
                 if n1 < 0:
                     print(style.color.rojo + "\nError: Cannot calculate square root of negative numbers." + style.color.RESET)
@@ -236,28 +286,42 @@ class Calculator:
                 print(style.color.rojo + "\nInvalid input. Please enter a valid number." + style.color.RESET)
                 return
             
+            except KeyboardInterrupt:
+                print(style.color.amarillo + "\nExiting the program..." + style.color.RESET)
+                return
+            
             calc.square_root(n1)  # Calculate square root
 
         elif response == 6:
             try:
+                print() # Add a new line for better readability
                 n1 = int(input(style.color.amarillo + "Base: " + style.color.RESET))
-                n2 = int(input(style.color.amarillo + "Exponent: " + style.color.RESET))
+                n2 = int(input(style.color.amarillo + "Exponent: " + style.color.RESET))                
                 print() # Add a new line for better readability
 
             except ValueError:
                 print(style.color.rojo + "\nInvalid input. Please enter valid numbers." + style.color.RESET)
                 return
             
+            except KeyboardInterrupt:
+                print(style.color.amarillo + "\nExiting the program..." + style.color.RESET)
+                return
+            
             calc.power(n1, n2)  # Calculate power
 
         elif response == 7:
             try:
+                print() # Add a new line for better readability
                 n1 = int(input(style.color.amarillo + "Number 1: " + style.color.RESET))
                 n2 = int(input(style.color.amarillo + "Number 2: " + style.color.RESET))
                 print() # Add a new line for better readability
 
             except ValueError:
                 print(style.color.rojo + "\nInvalid input. Please enter valid numbers." + style.color.RESET)
+                return
+            
+            except KeyboardInterrupt:
+                print(style.color.amarillo + "\nExiting the program..." + style.color.RESET)
                 return
             
             calc.lcm(n1, n2)  # Calculate least common multiple
@@ -271,4 +335,14 @@ class Calculator:
             except ValueError:
                 print(style.color.rojo + "\nInvalid input. Please enter valid numbers." + style.color.RESET)
                 return
+
+            except KeyboardInterrupt:
+                print(style.color.amarillo + "\nExiting the program..." + style.color.RESET)
+                return
+
             calc.gcd(n1, n2)  # Calculate greatest common divisor
+
+# Code Testing
+if __name__ == "__main__":
+    calc = Calculator(output="Result: ")  # Create a calculator object with the specified output text
+    calc.start_program()  # Start the calculator program
