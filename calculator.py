@@ -99,7 +99,28 @@ class Calculator:
             guess = (guess + arg / guess) / 2.0  # Improve the guess using Newton's method
 
         print(self.__text, guess)  # Print the square root of the argument with the optional text
-        
+
+    def cube_root(self, arg):
+        '''
+        This function calculates the cube root of the provided argument and prints the result.
+        '''
+        if arg < 0:
+            is_negative = True
+            arg = -arg  # Work with the absolute value for calculation
+        else:
+            is_negative = False
+
+        guess = arg / 3.0
+        tolerance = 0.000001
+        while abs(guess * guess * guess - arg) > tolerance:
+            guess = (2 * guess + arg / (guess * guess)) / 3.0
+    
+        if is_negative:
+            guess = -guess  # Adjust the result to negative if the original number was negative
+    
+        print(self.__text, guess)  # Print the cube root of the argument with the optional text
+
+
     def power(self, base, exp):
         '''
         This function raises the base to the power of exp and prints the result
@@ -165,7 +186,8 @@ class Calculator:
         print("7. Least Common Multiple")
         print("8. Greatest Common Divisor")
         print("9. Rest of the division")
-        print("10. Prime Factorization" + style.color.RESET)
+        print("10. Prime Factorization")
+        print("11. Cube Root" + style.color.RESET)
 
         try:
             response = int(input(style.color.purpura + f"\n{self.__question}" + style.color.RESET))  # Get user input for the operation
@@ -369,7 +391,7 @@ class Calculator:
                 print(style.color.amarillo + "\nExiting the program..." + style.color.RESET)
                 return
 
-            calc.rest_of_division(n1, n2)
+            calc.rest_of_division(n1, n2) # Calculate the rest of the division
 
         elif response == 10:
             try:
@@ -386,6 +408,22 @@ class Calculator:
                 return
 
             calc.factorization(n)  # Calculate prime factorization
+
+        elif response == 11:
+            try:
+                print() # Add a new line for better readability
+                n = int(input(style.color.amarillo + "Number to calculate cube root: " + style.color.RESET))
+                print() # Add a new line for better readability
+
+            except ValueError:
+                print(style.color.rojo + "\nInvalid input. Please enter a valid number." + style.color.RESET)
+                return
+            
+            except KeyboardInterrupt:
+                print(style.color.amarillo + "\nExiting the program..." + style.color.RESET)
+                return
+
+            calc.cube_root(n)  # Calculate cube root
 
 # Code Testing
 if __name__ == "__main__":
