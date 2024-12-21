@@ -1,16 +1,18 @@
 class Calculator:
+    """
+    A simple calculator class that performs basic arithmetic operations and prints the results.
+    """
     def __init__(self, text="", question="What operation do you want to do?: "):
-        #
-        # Initialize the calculator with optional text and question
-        #
+        '''
+        Initialize the calculator with optional text and question
+        '''
         self.__text = text
         self.__question = f"{question}"
 
     def add(self, arguments):
-        #
-        # This function adds all the provided arguments and prints the result
-        #
-
+        '''
+        This function adds all the provided arguments and prints the result
+        '''
         total = 0
         for arg in arguments:
             total += arg  # Add each argument to the total
@@ -18,10 +20,9 @@ class Calculator:
         print(self.__text, total)  # Print the result with the optional text
 
     def subtract(self, arguments):
-        #
-        # This function subtracts all the provided arguments from the first one and prints the result
-        #
-
+        '''
+        This function subtracts all the provided arguments from the first one and prints the result
+        '''
         total = None
         for arg in arguments:
             if total is None:
@@ -31,10 +32,9 @@ class Calculator:
         print(self.__text, total)  # Print the result with the optional text
 
     def divide(self, arguments):
-        #
-        # This function divides the first argument by the subsequent arguments and prints the result
-        #
-        
+        '''
+        This function divides the first argument by the subsequent arguments and prints the result
+        '''
         total = None
         for arg in arguments:
             if total is None:
@@ -45,10 +45,9 @@ class Calculator:
         print(self.__text, total)  # Print the result with the optional text
 
     def multiply(self, arguments):
-        #
-        # This function multiplies all the provided arguments and prints the result
-        #
-
+        '''
+        This function multiplies all the provided arguments and prints the result
+        '''
         total = None
         for arg in arguments:
             if total is None:
@@ -59,10 +58,9 @@ class Calculator:
         print(self.__text, total)  # Print the result with the optional text
 
     def square_root(self, arg):
-        #
-        # This function calculates the square root of the provided argument and prints the result
-        #
-
+        '''
+        This function calculates the square root of the provided argument and prints the result
+        '''
         if arg < 0:
             print(self.__text, "Error: Negative input")  # Handle negative input
             return
@@ -75,17 +73,15 @@ class Calculator:
         print(self.__text, guess)  # Print the square root of the argument with the optional text
         
     def power(self, base, exp):
-        #
-        # This function raises the base to the power of exp and prints the result
-        #
-
+        '''
+        This function raises the base to the power of exp and prints the result
+        '''
         print(self.__text, base ** exp)  # Print the result of base raised to the power of exp with the optional text
         
     def lcm(self, n1, n2):
-        #
-        # This function calculates the least common multiple of two numbers and prints the result
-        #
-        
+        '''
+        This function calculates the least common multiple of two numbers and prints the result
+        '''
         result = 0
         m1 = [n1 * i for i in range(1, 51)]  # Generate multiples of n1
         m2 = [n2 * i for i in range(1, 51)]  # Generate multiples of n2
@@ -98,10 +94,9 @@ class Calculator:
         print(self.__text, result)  # Print the least common multiple with the optional text
 
     def gcd(self, n1, n2):
-        #
-        # This function calculates the greatest common divisor of two numbers and prints the result
-        #
-
+        '''
+        This function calculates the greatest common divisor of two numbers and prints the result
+        '''
         n1_factors = []
         n2_factors = []
         factorize_n1 = [2, 3, 5, 7, 11, n1]  # List of potential factors for n1
@@ -142,10 +137,9 @@ class Calculator:
         print(self.__text, total)  # Print the greatest common divisor with the optional text
        
     def start_program(self):
-        #
-        # This function starts the calculator program and prompts the user to choose an operation
-        #
-
+        '''
+        This function starts the calculator program and prompts the user to choose an operation
+        '''
         print("1. Add")
         print("2. Subtract")
         print("3. Divide")
