@@ -150,35 +150,40 @@ class Calculator:
         print("8. Greatest Common Divisor")
 
         try:
-            response = int(input(self.__question))  # Get user input for the operation
+            response = int(input(f"\n{self.__question}"))  # Get user input for the operation
         except ValueError:
-            print("Invalid input. Please enter a valid number between 1 and 8.")
+            print("\nInvalid input. Please enter a valid number between 1 and 8.")
             return
 
-        calc = Calculator("Result:")
+        calc = Calculator("\nResult:")
 
         if response == 1:
             numers = []
-            num_count = int(input("How many numbers do you want to add? "))
+            num_count = int(input("\nHow many numbers do you want to add? "))
+            print() # Add a new line for better readability
+
             for i in range(num_count):
                 try:
                     num = int(input(f"Number {i+1}: "))  # Get user input for the numbers to add
                     numers.append(num)
                 except ValueError:
-                    print("Invalid input. Please enter a valid number.")
+                    print("\nInvalid input. Please enter a valid number.")
                     return
         
             calc.add(numers)  # Perform addition
 
         elif response == 2:
             numers = []
-            num_count = int(input("How many numbers do you want to subtract? "))
+            num_count = int(input("\nHow many numbers do you want to subtract? "))
+            print() # Add a new line for better readability
+
             for i in range(num_count):
                 try:
                     num = int(input(f"Number {i+1}: "))  # Get user input for the numbers to subtract
                     numers.append(num)
+
                 except ValueError:
-                    print("Invalid input. Please enter a valid number.")
+                    print("\nInvalid input. Please enter a valid number.")
                     return
 
             calc.subtract(numers)  # Perform subtraction
@@ -187,61 +192,78 @@ class Calculator:
             try:
                 n1 = int(input("Dividend: "))
                 n2 = int(input("Divisor: "))
+                print() # Add a new line for better readability
+
                 if n2 == 0:
-                    print("Error: Cannot divide by zero.")
+                    print("\nError: Cannot divide by zero.")
                     return
+                
             except ValueError:
-                print("Invalid input. Please enter valid numbers.")
+                print("\nInvalid input. Please enter valid numbers.")
                 return
+            
             calc.divide([n1, n2])  # Perform division
 
         elif response == 4:
             numers = []
-            num_count = int(input("How many numbers do you want to multiply? "))
+            num_count = int(input("\nHow many numbers do you want to multiply? "))
+            print() # Add a new line for better readability
+
             for i in range(num_count):
                 try:
                     num = int(input(f"Number {i+1}: "))  # Get user input for the numbers to multiply
                     numers.append(num)
+
                 except ValueError:
-                    print("Invalid input. Please enter a valid number.")
+                    print("\nInvalid input. Please enter a valid number.")
                     return
 
             calc.multiply(numers)  # Perform multiplication
 
         elif response == 5:
             try:
-                n1 = int(input("Number to calculate square root: "))
+                n1 = int(input("\nNumber to calculate square root: "))
                 if n1 < 0:
-                    print("Error: Cannot calculate square root of negative numbers.")
+                    print("\nError: Cannot calculate square root of negative numbers.")
                     return
+                
             except ValueError:
-                print("Invalid input. Please enter a valid number.")
+                print("\nInvalid input. Please enter a valid number.")
                 return
+            
             calc.square_root(n1)  # Calculate square root
 
         elif response == 6:
             try:
                 n1 = int(input("Base: "))
                 n2 = int(input("Exponent: "))
+                print() # Add a new line for better readability
+
             except ValueError:
-                print("Invalid input. Please enter valid numbers.")
+                print("\nInvalid input. Please enter valid numbers.")
                 return
+            
             calc.power(n1, n2)  # Calculate power
 
         elif response == 7:
             try:
                 n1 = int(input("Number 1: "))
                 n2 = int(input("Number 2: "))
+                print() # Add a new line for better readability
+
             except ValueError:
-                print("Invalid input. Please enter valid numbers.")
+                print("\nInvalid input. Please enter valid numbers.")
                 return
+            
             calc.lcm(n1, n2)  # Calculate least common multiple
 
         elif response == 8:
             try:
                 n1 = int(input("Number 1: "))
                 n2 = int(input("Number 2: "))
+                print() # Add a new line for better readability
+
             except ValueError:
-                print("Invalid input. Please enter valid numbers.")
+                print("\nInvalid input. Please enter valid numbers.")
                 return
             calc.gcd(n1, n2)  # Calculate greatest common divisor
