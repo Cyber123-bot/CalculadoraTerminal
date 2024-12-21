@@ -139,7 +139,7 @@ class Calculator:
                 
         print(self.__text, total)  # Print the greatest common divisor with the optional text
        
-    def start_program(self, output="Result: "):
+    def start_program(self):
         '''
         This function starts the calculator program and prompts the user to choose an operation
         '''
@@ -159,7 +159,7 @@ class Calculator:
             print(style.color.rojo + "\nInvalid input. Please enter a valid number between 1 and 8." + style.color.RESET)
             return
 
-        calc = Calculator(output)  # Create a new calculator object with the specified output text
+        calc = Calculator(self.__output)  # Create a new calculator object with the specified output text
 
         if response == 1:
             numers = []
