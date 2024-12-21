@@ -99,46 +99,16 @@ class Calculator:
 
     def gcd(self, n1, n2):
         '''
-        This function calculates the greatest common divisor of two numbers and prints the result
+        This function calculates the greatest common divisor (GCD) of two numbers using the Euclidean algorithm 
+        and prints the result.
         '''
-        n1_factors = []
-        n2_factors = []
-        factorize_n1 = [2, 3, 5, 7, 11, n1]  # List of potential factors for n1
-        factorize_n2 = [2, 3, 5, 7, 11, n2]  # List of potential factors for n2
+        # Apply the Euclidean algorithm
+        while n2 != 0:
+            n1, n2 = n2, n1 % n2  # Swap n1 with n2, and set n2 to the remainder of n1 divided by n2
+    
+        # Print the result along with any additional text if necessary
+        print(self.__text, n1)  # The final value of n1 is the GCD
 
-        i = 0
-        while n1 != 1:
-            if n1 % factorize_n1[i] == 0:
-                n1_factors.append(factorize_n1[i])  # Add factor to n1_factors
-                n1 /= factorize_n1[i] 
-            else:
-                i += 1
-        i = 0
-        while n2 != 1:
-            if n2 % factorize_n2[i] == 0:
-                n2_factors.append(factorize_n2[i])  # Add factor to n2_factors
-                n2 /= factorize_n1[i] 
-            else:
-                i += 1
-
-        final_equation = []
-        for num in n1_factors:
-            if num in n2_factors and num not in final_equation:
-                if n1_factors.count(num) > n2_factors.count(num):
-                    for i in range(n2_factors.count(num)):
-                        final_equation.append(num)  # Add common factors to final_equation
-                else: 
-                    for i in range(n1_factors.count(num)):
-                        final_equation.append(num)
-
-        total = None
-        for arg in final_equation:
-            if total is None:
-                total = arg  # Initialize total with the first common factor
-            else:
-                total *= arg  # Multiply total by each subsequent common factor
-                
-        print(self.__text, total)  # Print the greatest common divisor with the optional text
        
     def start_program(self):
         '''
