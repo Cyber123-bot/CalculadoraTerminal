@@ -110,6 +110,21 @@ class Calculator:
         print(self.__text, n1)  # The final value of n1 is the GCD
 
        
+    def rest_of_division(self, n1, n2):
+        '''
+        This function calculates the rest of the division of two numbers and prints the result
+        '''
+        try:
+            result = n1 % n2
+        
+        except ZeroDivisionError:
+            print(self.__text, "Error: Cannot divide by zero.")  # Handle division by zero
+
+        except ValueError:
+            print(self.__text, "Error: Invalid input.")  # Handle invalid input
+        
+        print(self.__text, result)
+
     def start_program(self):
         '''
         This function starts the calculator program and prompts the user to choose an operation
@@ -124,7 +139,8 @@ class Calculator:
         print("5. Square Root")
         print("6. Power")
         print("7. Least Common Multiple")
-        print("8. Greatest Common Divisor" + style.color.RESET)
+        print("8. Greatest Common Divisor")
+        print("9. Rest of the division" + style.color.RESET)
 
         try:
             response = int(input(style.color.purpura + f"\n{self.__question}" + style.color.RESET))  # Get user input for the operation
@@ -298,6 +314,7 @@ class Calculator:
 
         elif response == 8:
             try:
+                print() # Add a new line for better readability
                 n1 = int(input(style.color.amarillo + "Number 1: " + style.color.RESET))
                 n2 = int(input(style.color.amarillo + "Number 2: " + style.color.RESET))
                 print() # Add a new line for better readability
@@ -311,6 +328,23 @@ class Calculator:
                 return
 
             calc.gcd(n1, n2)  # Calculate greatest common divisor
+
+        elif response == 9:
+            try:
+                print() # Add a new line for better readability
+                n1 = int(input(style.color.amarillo + "Dividend: " + style.color.RESET))
+                n2 = int(input(style.color.amarillo + "Divisor: " + style.color.RESET))
+                print() # Add a new line for better readability
+
+            except ValueError:
+                print(style.color.rojo + "\nInvalid input. Please enter valid numbers." + style.color.RESET)
+                return
+            
+            except KeyboardInterrupt:
+                print(style.color.amarillo + "\nExiting the program..." + style.color.RESET)
+                return
+
+            calc.rest_of_division(n1, n2)
 
 # Code Testing
 if __name__ == "__main__":
