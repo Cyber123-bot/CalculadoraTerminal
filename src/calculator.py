@@ -195,6 +195,8 @@ class Calculator:
         This function starts the calculator program and prompts the user to choose an operation
         '''
         os.system('cls' if os.name == 'nt' else 'clear')  # Clear the terminal screen
+
+        # Print the welcome message
         print(style.color.azul + "\tWelcome to the Calculator Program!" + style.color.RESET)
 
         print(style.color.cyan + "\n1. Add")
