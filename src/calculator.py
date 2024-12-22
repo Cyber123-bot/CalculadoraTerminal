@@ -282,9 +282,8 @@ class Calculator:
 
         elif response == 3:
             try:
-                print() # Add a new line for better readability
                 try:
-                    n1 = int(input(style.color.amarillo + "Dividend: " + style.color.RESET))
+                    n1 = int(input(style.color.amarillo + "\nDividend: " + style.color.RESET))
                     n2 = int(input(style.color.amarillo + "Divisor: " + style.color.RESET))
                 
                 except KeyboardInterrupt:
@@ -312,8 +311,6 @@ class Calculator:
                 print(style.color.amarillo + "\nExiting the program..." + style.color.RESET)
                 return
             
-            print() # Add a new line for better readability
-
             for i in range(num_count):
                 try:
                     print() # Add a new line for better readability
@@ -351,8 +348,7 @@ class Calculator:
             try:
                 n1 = int(input(style.color.amarillo + "\nBase: " + style.color.RESET))
                 n2 = int(input(style.color.amarillo + "Exponent: " + style.color.RESET))                
-                print() # Add a new line for better readability
-
+                
             except ValueError:
                 print(style.color.rojo + "\nInvalid input. Please enter valid numbers." + style.color.RESET)
                 return
@@ -361,13 +357,13 @@ class Calculator:
                 print(style.color.amarillo + "\nExiting the program..." + style.color.RESET)
                 return
             
+            print() # Add a new line for better readability
             calc.power(n1, n2)  # Calculate power
 
         elif response == 7:
             try:
                 n1 = int(input(style.color.amarillo + "\nNumber 1: " + style.color.RESET))
                 n2 = int(input(style.color.amarillo + "Number 2: " + style.color.RESET))
-                print() # Add a new line for better readability
 
             except ValueError:
                 print(style.color.rojo + "\nInvalid input. Please enter valid numbers." + style.color.RESET)
@@ -377,13 +373,13 @@ class Calculator:
                 print(style.color.amarillo + "\nExiting the program..." + style.color.RESET)
                 return
             
+            print() # Add a new line for better readability
             calc.lcm(n1, n2)  # Calculate least common multiple
 
         elif response == 8:
             try:
                 n1 = int(input(style.color.amarillo + "\nNumber 1: " + style.color.RESET))
                 n2 = int(input(style.color.amarillo + "Number 2: " + style.color.RESET))
-                print() # Add a new line for better readability
 
             except ValueError:
                 print(style.color.rojo + "\nInvalid input. Please enter valid numbers." + style.color.RESET)
@@ -392,14 +388,14 @@ class Calculator:
             except KeyboardInterrupt:
                 print(style.color.amarillo + "\nExiting the program..." + style.color.RESET)
                 return
-
+            
+            print() # Add a new line for better readability
             calc.gcd(n1, n2)  # Calculate greatest common divisor
 
         elif response == 9:
             try:
                 n1 = int(input(style.color.amarillo + "\nDividend: " + style.color.RESET))
                 n2 = int(input(style.color.amarillo + "Divisor: " + style.color.RESET))
-                print() # Add a new line for better readability
 
             except ValueError:
                 print(style.color.rojo + "\nInvalid input. Please enter valid numbers." + style.color.RESET)
@@ -408,13 +404,13 @@ class Calculator:
             except KeyboardInterrupt:
                 print(style.color.amarillo + "\nExiting the program..." + style.color.RESET)
                 return
-
+            
+            print() # Add a new line for better readability
             calc.rest_of_division(n1, n2) # Calculate the rest of the division
 
         elif response == 10:
             try:
                 n = int(input(style.color.amarillo + "\nNumber to factorize: " + style.color.RESET))
-                print() # Add a new line for better readability
 
             except ValueError:
                 print(style.color.rojo + "\nInvalid input. Please enter a valid number." + style.color.RESET)
@@ -424,12 +420,12 @@ class Calculator:
                 print(style.color.amarillo + "\nExiting the program..." + style.color.RESET)
                 return
 
+            print() # Add a new line for better readability
             calc.factorization(n)  # Calculate prime factorization
 
         elif response == 11:
             try:
                 n = int(input(style.color.amarillo + "\nNumber to calculate cube root: " + style.color.RESET))
-                print() # Add a new line for better readability
 
             except ValueError:
                 print(style.color.rojo + "\nInvalid input. Please enter a valid number." + style.color.RESET)
@@ -439,13 +435,13 @@ class Calculator:
                 print(style.color.amarillo + "\nExiting the program..." + style.color.RESET)
                 return
 
+            print() # Add a new line for better readability
             calc.cube_root(n)  # Calculate cube root
 
         elif response == 12:
             try:
                 n1 = int(input(style.color.amarillo + "\nNumber: " + style.color.RESET))
                 n2 = int(input(style.color.amarillo + "Total: " + style.color.RESET))
-                print() # Add a new line for better readability
             
             except ValueError:
                 print(style.color.rojo + "\nInvalid input. Please enter valid numbers." + style.color.RESET)
@@ -455,6 +451,7 @@ class Calculator:
                 print(style.color.amarillo + "\nExiting the program..." + style.color.RESET)
                 return
             
+            print() # Add a new line for better readability
             calc.percentage(n1, n2)  # Calculate percentage
 
 # Code Testing
