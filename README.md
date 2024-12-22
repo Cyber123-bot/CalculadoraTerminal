@@ -20,7 +20,7 @@ This project is a simple Python calculator that performs various mathematical op
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Cyber123-bot/calculator.git
+   https://github.com/Cyber123-bot/TerminalCalculator.git
    ```
 
 2. Run the program:
