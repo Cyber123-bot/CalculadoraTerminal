@@ -115,5 +115,6 @@ class TestCalculator(unittest.TestCase):
         sys.stdout = sys.__stdout__
         self.assertIn("Invalid input", captured_output.getvalue())
 
+# Run the tests
 if __name__ == '__main__':
     unittest.main()
