@@ -18,7 +18,7 @@ class Calculator:
         This function calculates the prime factorization of a number and prints the result
         '''
         if n <= 1:
-            print(f"{self.__text}Error: Factorization is not defined for numbers <= 1.")
+            print(f"Error: Factorization is not defined for numbers <= 1.")
             return
     
         i = 2
@@ -36,6 +36,17 @@ class Calculator:
         # Display the prime factors joined by ' x ' for readability
         print(f"{self.__text}{' x '.join(map(str, factors))}")
 
+    def percentage(self, n1, n2):
+        '''
+        This function calculates the percentage of n1 with respect to n2 and prints the result
+        '''
+        try:
+            result = (n1 / n2) * 100  # Calculate the percentage
+            print(self.__text, result)  # Print the result with the optional text
+
+        except ZeroDivisionError:
+            print("Error: Cannot divide by zero.")  # Handle division by zero
+            return
 
     def add(self, arguments):
         '''
@@ -187,7 +198,8 @@ class Calculator:
         print("8. Greatest Common Divisor")
         print("9. Rest of the division")
         print("10. Prime Factorization")
-        print("11. Cube Root" + style.color.RESET)
+        print("11. Cube Root")
+        print("12. Percentage of a number" + style.color.RESET)
 
         try:
             response = int(input(style.color.purpura + f"\n{self.__question}" + style.color.RESET))  # Get user input for the operation
@@ -309,7 +321,6 @@ class Calculator:
 
         elif response == 5:
             try:
-                print() # Add a new line for better readability
                 n1 = int(input(style.color.amarillo + "\nNumber to calculate square root: " + style.color.RESET))
                 if n1 < 0:
                     print(style.color.rojo + "\nError: Cannot calculate square root of negative numbers." + style.color.RESET)
@@ -327,8 +338,7 @@ class Calculator:
 
         elif response == 6:
             try:
-                print() # Add a new line for better readability
-                n1 = int(input(style.color.amarillo + "Base: " + style.color.RESET))
+                n1 = int(input(style.color.amarillo + "\nBase: " + style.color.RESET))
                 n2 = int(input(style.color.amarillo + "Exponent: " + style.color.RESET))                
                 print() # Add a new line for better readability
 
@@ -344,8 +354,7 @@ class Calculator:
 
         elif response == 7:
             try:
-                print() # Add a new line for better readability
-                n1 = int(input(style.color.amarillo + "Number 1: " + style.color.RESET))
+                n1 = int(input(style.color.amarillo + "\nNumber 1: " + style.color.RESET))
                 n2 = int(input(style.color.amarillo + "Number 2: " + style.color.RESET))
                 print() # Add a new line for better readability
 
@@ -361,8 +370,7 @@ class Calculator:
 
         elif response == 8:
             try:
-                print() # Add a new line for better readability
-                n1 = int(input(style.color.amarillo + "Number 1: " + style.color.RESET))
+                n1 = int(input(style.color.amarillo + "\nNumber 1: " + style.color.RESET))
                 n2 = int(input(style.color.amarillo + "Number 2: " + style.color.RESET))
                 print() # Add a new line for better readability
 
@@ -378,8 +386,7 @@ class Calculator:
 
         elif response == 9:
             try:
-                print() # Add a new line for better readability
-                n1 = int(input(style.color.amarillo + "Dividend: " + style.color.RESET))
+                n1 = int(input(style.color.amarillo + "\nDividend: " + style.color.RESET))
                 n2 = int(input(style.color.amarillo + "Divisor: " + style.color.RESET))
                 print() # Add a new line for better readability
 
@@ -395,8 +402,7 @@ class Calculator:
 
         elif response == 10:
             try:
-                print() # Add a new line for better readability
-                n = int(input(style.color.amarillo + "Number to factorize: " + style.color.RESET))
+                n = int(input(style.color.amarillo + "\nNumber to factorize: " + style.color.RESET))
                 print() # Add a new line for better readability
 
             except ValueError:
@@ -411,8 +417,7 @@ class Calculator:
 
         elif response == 11:
             try:
-                print() # Add a new line for better readability
-                n = int(input(style.color.amarillo + "Number to calculate cube root: " + style.color.RESET))
+                n = int(input(style.color.amarillo + "\nNumber to calculate cube root: " + style.color.RESET))
                 print() # Add a new line for better readability
 
             except ValueError:
@@ -424,6 +429,22 @@ class Calculator:
                 return
 
             calc.cube_root(n)  # Calculate cube root
+
+        elif response == 12:
+            try:
+                n1 = int(input(style.color.amarillo + "\nNumber: " + style.color.RESET))
+                n2 = int(input(style.color.amarillo + "Total: " + style.color.RESET))
+                print() # Add a new line for better readability
+            
+            except ValueError:
+                print(style.color.rojo + "\nInvalid input. Please enter valid numbers." + style.color.RESET)
+                return
+            
+            except KeyboardInterrupt:
+                print(style.color.amarillo + "\nExiting the program..." + style.color.RESET)
+                return
+            
+            calc.percentage(n1, n2)  # Calculate percentage
 
 # Code Testing
 if __name__ == "__main__":
