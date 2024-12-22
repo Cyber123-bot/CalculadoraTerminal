@@ -31,3 +31,6 @@ This project is a simple Python calculator that performs various mathematical op
 ## Requirements
 - Python 3.x
 - os library (usually pre-installed with Python)
+- unittest (for running unit tests)
+- io (for handling string input/output, including StringIO)
+- sys (for interacting with the system and handling standard input/output)
