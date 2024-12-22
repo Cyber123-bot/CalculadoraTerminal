@@ -34,4 +34,4 @@ This project is a simple Python calculator that performs various mathematical op
 - unittest (for running unit tests)
 - io (for handling string input/output, including StringIO)
 - sys (for interacting with the system and handling standard input/output)
-- `style` module (must be in the same directory as `calculator.py`)
+- style module (must be in the same directory as `calculator.py`)
