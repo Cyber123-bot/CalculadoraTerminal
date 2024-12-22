@@ -7,14 +7,14 @@ This project is a simple Python calculator that performs various mathematical op
 - **Subtraction**: Subtracts one number from another.
 - **Multiplication**: Multiplies two numbers.
 - **Division**: Divides one number by another (with error handling for division by zero).
+- **Rest of the Division**: Computes the remainder of the division (modulus operation).
 - **Square Root**: Calculates the square root of a number.
+- **Cube Root**: Calculates the cube root of a number.
 - **Power**: Calculates the power of a number (x^y).
 - **LCM (Least Common Multiple)**: Finds the least common multiple of two numbers.
 - **GCD (Greatest Common Divisor)**: Finds the greatest common divisor of two numbers.
 - **Percentage**: Calculates the percentage of a number relative to another.
-- **Cube Root**: Calculates the cube root of a number.
 - **Prime Factorization**: Decomposes a number into its prime factors.
-- **Rest of the Division**: Computes the remainder of the division (modulus operation).
 
 ## Usage
 
