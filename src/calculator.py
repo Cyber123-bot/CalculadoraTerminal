@@ -48,16 +48,24 @@ class Calculator:
         except ZeroDivisionError:
             print("Error: Cannot divide by zero.")  # Handle division by zero
             return
-
-    def add(self, arguments):
+    
+    def add(self, args):
         '''
         This function adds all the provided arguments and prints the result
         '''
-        total = 0
-        for arg in arguments:
-            total += arg  # Add each argument to the total
+        try:
+            total = 0
+            for arg in args:
+                if not isinstance(arg, (int, float)): # Check if the argument is a number
+                    raise ValueError(f"Invalid input: {arg} is not a number")
+                
+                total += arg
+            
+            print(f"{self.__text}{total}") # Print the result with the optional text
         
-        print(self.__text, total)  # Print the result with the optional text
+        except ValueError as e:
+            print(f"Error: {e}")
+
 
     def subtract(self, arguments):
         '''
