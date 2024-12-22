@@ -35,3 +35,21 @@ This project is a simple Python calculator that performs various mathematical op
 - io (for handling string input/output, including StringIO)
 - sys (for interacting with the system and handling standard input/output)
 - style module (must be in the same directory as `calculator.py`)
+
+## Code Structure
+
+- `Calculator`: Main class that handles the calculator's functionality.
+  - `__init__`: Initializes the calculator with optional text and question prompts.
+  - `factorization`: Calculates and prints the prime factorization of a number.
+  - `percentage`: Calculates and prints the percentage of one number relative to another.
+  - `add`: Adds a list of numbers and prints the result.
+  - `subtract`: Subtracts a list of numbers sequentially and prints the result.
+  - `divide`: Divides the first number by subsequent numbers and prints the result.
+  - `multiply`: Multiplies a list of numbers and prints the result.
+  - `square_root`: Calculates and prints the square root of a number using Newton's method.
+  - `cube_root`: Calculates and prints the cube root of a number.
+  - `power`: Raises a base to an exponent and prints the result.
+  - `lcm`: Calculates and prints the least common multiple of two numbers.
+  - `gcd`: Calculates and prints the greatest common divisor of two numbers using the Euclidean algorithm.
+  - `rest_of_division`: Calculates and prints the remainder of the division of two numbers.
+  - `start_program`: Starts the calculator program, displays a menu of operations, and prompts the user for input.
