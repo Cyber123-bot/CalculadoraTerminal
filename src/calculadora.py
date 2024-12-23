@@ -4,7 +4,7 @@ import os
 
 class Calculadora:
     """
-    Una clase simple de calculadora que realiza operaciones aritméticas básicas y muestra los resultados.
+    Esta clase es una calculadora que realiza operaciones aritméticas básicas y muestra los resultados.
     """
     def __init__(self, texto="", pregunta="¿Qué operación deseas realizar?: ", salida="Resultado: "):
         '''
