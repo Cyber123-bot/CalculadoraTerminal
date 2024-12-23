@@ -29,12 +29,12 @@ Este proyecto es una calculadora simple en Python que realiza varias operaciones
    ```
 
 ## Dependencias
-- Python 3.x
-- os (normalmente preinstalada con Python)
-- unittest (para correr pruebas unitarias)
-- io (para manejar la entrada/salida de cadenas, incluyendo StringIO)
-- sys (para interactuar con el sistema y manejar la entrada/salida estándar)
-- módulo style (debe estar en el mismo directorio que `calculadora.py`)
+- `Python 3.x`
+- `os` (normalmente preinstalada con Python)
+- `unittest` (para correr pruebas unitarias)
+- `io` (para manejar la entrada/salida de cadenas, incluyendo StringIO)
+- `sys` (para interactuar con el sistema y manejar la entrada/salida estándar)
+- `estilos` (debe estar en el mismo directorio que `calculadora.py`)
 
 ## Estructura del Código
 
