@@ -1,6 +1,6 @@
 class color:
     '''
-    Colors for the terminal
+    Colores para la terminal
     '''
     
     RESET = "\033[0m"
@@ -9,5 +9,5 @@ class color:
     amarillo = "\033[93m"
     azul = "\033[94m"
     purpura = "\033[95m"
-    cyan = "\033[96m"
-    orange = "\033[38;5;214m"
+    cian = "\033[96m"
+    naranga = "\033[38;5;214m"

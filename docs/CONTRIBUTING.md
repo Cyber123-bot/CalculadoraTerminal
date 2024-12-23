@@ -1,28 +1,29 @@
-# Contributing to CalculatorTerminal
+# Contribuir a CalculatorTerminal
 
-Thanks for your interest in contributing to CalculatorTerminal! Here are some ways you can help:
+¡Gracias por tu interés en contribuir a CalculadoraTerminal! Aquí hay algunas formas en las que puedes ayudar:
 
-## Report Issues
-If you find a bug or want to suggest a new feature, open an issue on [GitHub](https://github.com/Cyber123-bot/CalculatorTerminal/issues).
+## Reportar Problemas
+Si encuentras un error o quieres sugerir una nueva característica, abre un problema en [GitHub](https://github.com/Cyber123-bot/CalculadoraTerminal/issues).
 
-## Suggest Improvements
-If you have an idea to improve the project, open an issue or join our discussions on GitHub.
+## Sugerir Mejoras
+Si tienes una idea para mejorar el proyecto, abre un problema o únete a nuestras discusiones en GitHub.
 
-## Submit Pull Requests
-Follow these steps to submit a pull request:
-1. Clone the repository: `git clone https://github.com/Cyber123-bot/CalculatorTerminal.git`
-2. Create a new branch: `git checkout -b feature-nueva`
-3. Make your changes and commit: `git commit -m "Description of changes"`
-4. Push the branch to the repository: `git push origin feature-nueva`
-5. Open a pull request on GitHub.
+## Enviar Pull Requests
+Sigue estos pasos para enviar un pull request:
+1. Clona el repositorio: `git clone https://github.com/Cyber123-bot/CalculadoraTerminal.git`
+2. Crea una nueva rama: `git checkout -b feature-nueva`
+3. Haz tus cambios y haz commit: `git commit -m "Descripción de los cambios"`
+4. Empuja la rama al repositorio: `git push origin feature-nueva`
+5. Abre un pull request en GitHub.
 
-## Improve Documentation
-If you see something missing in the documentation or think it can be improved, please submit a pull request.
+## Mejorar la Documentación
+Si ves algo que falta en la documentación o crees que se puede mejorar, por favor envía un pull request.
 
-## Run Tests
-Make sure your code passes all unit tests before submitting a pull request. You can run tests with `python -m unittest`.
+## Ejecutar Pruebas
+Asegúrate de que tu código pase todas las pruebas unitarias antes de enviar un pull request. Puedes ejecutar las pruebas con `python -m unittest`.
 
-## Contact Me
-If you have any questions, suggestions, or want to connect, feel free to reach out to me via email at [cyber123.bot@gmail.com].
+## Contactarme
+Si tienes alguna pregunta, sugerencia o quieres conectarte, no dudes en contactarme por correo electrónico a [cyber123.bot@gmail.com].
 
-Thanks for contributing!
+¡Gracias por contribuir!
+

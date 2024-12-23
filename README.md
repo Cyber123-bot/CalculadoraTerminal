@@ -1,55 +1,55 @@
-# Calculator Project
+# Proyecto de Calculadora
 
-This project is a simple Python calculator that performs various mathematical operations such as addition, subtraction, multiplication, division, square root, power, LCM, GCD, percentage, cube root, prime factorization and rest of the division.
+Este proyecto es una calculadora simple en Python que realiza varias operaciones matemáticas como suma, resta, multiplicación, división, raíz cuadrada, potencia, MCM (mínimo común múltiple), MCD (máximo común divisor), porcentaje, raíz cúbica, factorización prima y resto de la división.
 
-## Features
-- **Addition**: Adds two numbers.
-- **Subtraction**: Subtracts one number from another.
-- **Multiplication**: Multiplies two numbers.
-- **Division**: Divides one number by another (with error handling for division by zero).
-- **Rest of the Division**: Computes the remainder of the division (modulus operation).
-- **Square Root**: Calculates the square root of a number.
-- **Cube Root**: Calculates the cube root of a number.
-- **Power**: Calculates the power of a number (x^y).
-- **LCM (Least Common Multiple)**: Finds the least common multiple of two numbers.
-- **GCD (Greatest Common Divisor)**: Finds the greatest common divisor of two numbers.
-- **Percentage**: Calculates the percentage of a number relative to another.
-- **Prime Factorization**: Decomposes a number into its prime factors.
+## Características
+- **Suma**: Suma dos números.
+- **Resta**: Resta un número de otro.
+- **Multiplicación**: Multiplica dos números.
+- **División**: Divide un número por otro (con manejo de errores para división por cero).
+- **Resto de la División**: Calcula el resto de la división (operación de módulo).
+- **Raíz Cuadrada**: Calcula la raíz cuadrada de un número.
+- **Raíz Cúbica**: Calcula la raíz cúbica de un número.
+- **Potencia**: Calcula la potencia de un número (x^y).
+- **MCM (Mínimo Común Múltiple)**: Encuentra el mínimo común múltiple de dos números.
+- **MCD (Máximo Común Divisor)**: Encuentra el máximo común divisor de dos números.
+- **Porcentaje**: Calcula el porcentaje de un número relativo a otro.
+- **Factorización Prima**: Descompone un número en sus factores primos.
 
-## Usage
+## Uso
 
-1. Clone the repository:
+1. Clonar el repositorio:
    ```bash
-   https://github.com/Cyber123-bot/TerminalCalculator.git
+   git clone https://github.com/Cyber123-bot/CalculadoraTerminal.git
    ```
 
-2. Run the program:
+2. Ejecutar el programa:
    ```bash
-   python calculator.py
+   python calculadora.py
    ```
 
-## Requirements
+## Dependencias
 - Python 3.x
-- os library (usually pre-installed with Python)
-- unittest (for running unit tests)
-- io (for handling string input/output, including StringIO)
-- sys (for interacting with the system and handling standard input/output)
-- style module (must be in the same directory as `calculator.py`)
+- os (normalmente preinstalada con Python)
+- unittest (para correr pruebas unitarias)
+- io (para manejar la entrada/salida de cadenas, incluyendo StringIO)
+- sys (para interactuar con el sistema y manejar la entrada/salida estándar)
+- módulo style (debe estar en el mismo directorio que `calculadora.py`)
 
-## Code Structure
+## Estructura del Código
 
-- `Calculator`: Main class that handles the calculator's functionality.
-  - `__init__`: Initializes the calculator with optional text and question prompts.
-  - `factorization`: Calculates and prints the prime factorization of a number.
-  - `percentage`: Calculates and prints the percentage of one number relative to another.
-  - `add`: Adds a list of numbers and prints the result.
-  - `subtract`: Subtracts a list of numbers sequentially and prints the result.
-  - `divide`: Divides the first number by subsequent numbers and prints the result.
-  - `multiply`: Multiplies a list of numbers and prints the result.
-  - `square_root`: Calculates and prints the square root of a number using Newton's method.
-  - `cube_root`: Calculates and prints the cube root of a number.
-  - `power`: Raises a base to an exponent and prints the result.
-  - `lcm`: Calculates and prints the least common multiple of two numbers.
-  - `gcd`: Calculates and prints the greatest common divisor of two numbers using the Euclidean algorithm.
-  - `rest_of_division`: Calculates and prints the remainder of the division of two numbers.
-  - `start_program`: Starts the calculator program, displays a menu of operations, and prompts the user for input.
+- `Calculator`: Clase principal que maneja la funcionalidad de la calculadora.
+  - `__init__`: Inicializa la calculadora con textos y preguntas opcionales.
+  - `factorizacion`: Calcula e imprime la factorización prima de un número.
+  - `porcentaje`: Calcula e imprime el porcentaje de un número relativo a otro.
+  - `suma`: Suma una lista de números e imprime el resultado.
+  - `resta`: Resta una lista de números secuencialmente e imprime el resultado.
+  - `division`: Divide el primer número por los números subsecuentes e imprime el resultado.
+  - `multiplicacion`: Multiplica una lista de números e imprime el resultado.
+  - `raiz_cuadrada`: Calcula e imprime la raíz cuadrada de un número usando el método de Newton.
+  - `raiz_cubica`: Calcula e imprime la raíz cúbica de un número.
+  - `potencia`: Eleva una base a un exponente e imprime el resultado.
+  - `mcm`: Calcula e imprime el mínimo común múltiple de dos números.
+  - `mcd`: Calcula e imprime el máximo común divisor de dos números usando el algoritmo de Euclides.
+  - `resto_division`: Calcula e imprime el resto de la división de dos números.
+  - `iniciar_programa`: Inicia el programa de la calculadora, muestra un menú de operaciones y solicita la entrada del usuario.

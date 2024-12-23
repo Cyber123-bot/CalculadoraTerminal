@@ -1,120 +1,120 @@
-# Import the necessary modules
+# Importar los módulos necesarios
 import unittest
 from io import StringIO
 import sys
 
-# Import the Calculator class
-from calculator import Calculator
+# Importar la clase Calculadora
+from calculadora import Calculadora
 
-class TestCalculator(unittest.TestCase):
+class TestCalculadora(unittest.TestCase):
     def setUp(self):
-        # Create a Calculator instance before each test
-        self.calc = Calculator(text="Result: ")
+        # Crear una instancia de Calculadora antes de cada prueba
+        self.calc = Calculadora(texto="Resultado: ")
 
-    def test_factorization(self):
-        # Test for a number with prime factorization
-        captured_output = StringIO()
-        sys.stdout = captured_output
-        self.calc.factorization(30)
+    def test_factorizacion(self):
+        # Prueba para un número con factorización prima
+        salida_capturada = StringIO()
+        sys.stdout = salida_capturada
+        self.calc.factorizacion(30)
         sys.stdout = sys.__stdout__
-        self.assertIn("2 x 3 x 5", captured_output.getvalue())
+        self.assertIn("2 x 3 x 5", salida_capturada.getvalue())
 
-    def test_percentage(self):
-        # Test for percentage calculation
-        captured_output = StringIO()
-        sys.stdout = captured_output
-        self.calc.percentage(25, 200)
+    def test_porcentaje(self):
+        # Prueba para el cálculo de porcentaje
+        salida_capturada = StringIO()
+        sys.stdout = salida_capturada
+        self.calc.porcentaje(25, 200)
         sys.stdout = sys.__stdout__
-        self.assertIn("12.5", captured_output.getvalue())
+        self.assertIn("12.5", salida_capturada.getvalue())
 
-    def test_add(self):
-        # Test addition with multiple numbers
-        captured_output = StringIO()
-        sys.stdout = captured_output
-        self.calc.add([1, 2, 3, 4])
+    def test_sumar(self):
+        # Prueba de suma con varios números
+        salida_capturada = StringIO()
+        sys.stdout = salida_capturada
+        self.calc.sumar([1, 2, 3, 4])
         sys.stdout = sys.__stdout__
-        self.assertIn("10", captured_output.getvalue())
+        self.assertIn("10", salida_capturada.getvalue())
 
-    def test_subtract(self):
-        # Test subtraction with multiple numbers
-        captured_output = StringIO()
-        sys.stdout = captured_output
-        self.calc.subtract([10, 5, 2])
+    def test_restar(self):
+        # Prueba de resta con varios números
+        salida_capturada = StringIO()
+        sys.stdout = salida_capturada
+        self.calc.restar([10, 5, 2])
         sys.stdout = sys.__stdout__
-        self.assertIn("3", captured_output.getvalue())
+        self.assertIn("3", salida_capturada.getvalue())
 
-    def test_multiply(self):
-        # Test multiplication with multiple numbers
-        captured_output = StringIO()
-        sys.stdout = captured_output
-        self.calc.multiply([2, 3, 4])
+    def test_multiplicar(self):
+        # Prueba de multiplicación con varios números
+        salida_capturada = StringIO()
+        sys.stdout = salida_capturada
+        self.calc.multiplicar([2, 3, 4])
         sys.stdout = sys.__stdout__
-        self.assertIn("24", captured_output.getvalue())
+        self.assertIn("24", salida_capturada.getvalue())
 
-    def test_divide(self):
-        # Test division with two numbers
-        captured_output = StringIO()
-        sys.stdout = captured_output
-        self.calc.divide([10, 2])
+    def test_dividir(self):
+        # Prueba de división con dos números
+        salida_capturada = StringIO()
+        sys.stdout = salida_capturada
+        self.calc.dividir([10, 2])
         sys.stdout = sys.__stdout__
-        self.assertIn("5.0", captured_output.getvalue())
+        self.assertIn("5.0", salida_capturada.getvalue())
 
-    def test_square_root(self):
-        # Test square root calculation
-        captured_output = StringIO()
-        sys.stdout = captured_output
-        self.calc.square_root(16)
+    def test_raiz_cuadrada(self):
+        # Prueba para el cálculo de la raíz cuadrada
+        salida_capturada = StringIO()
+        sys.stdout = salida_capturada
+        self.calc.raiz_cuadrada(16)
         sys.stdout = sys.__stdout__
-        self.assertIn("4.0", captured_output.getvalue())
+        self.assertIn("4.0", salida_capturada.getvalue())
 
-    def test_cube_root(self):
-        # Test cube root calculation
-        captured_output = StringIO()
-        sys.stdout = captured_output
-        self.calc.cube_root(27)
+    def test_raiz_cubica(self):
+        # Prueba para el cálculo de la raíz cúbica
+        salida_capturada = StringIO()
+        sys.stdout = salida_capturada
+        self.calc.raiz_cubica(27)
         sys.stdout = sys.__stdout__
-        self.assertIn("3.0", captured_output.getvalue())
+        self.assertIn("3.0", salida_capturada.getvalue())
 
-    def test_power(self):
-        # Test power calculation
-        captured_output = StringIO()
-        sys.stdout = captured_output
-        self.calc.power(2, 3)
+    def test_potencia(self):
+        # Prueba de cálculo de potencia
+        salida_capturada = StringIO()
+        sys.stdout = salida_capturada
+        self.calc.potencia(2, 3)
         sys.stdout = sys.__stdout__
-        self.assertIn("8", captured_output.getvalue())
+        self.assertIn("8", salida_capturada.getvalue())
 
-    def test_lcm(self):
-        # Test LCM calculation
-        captured_output = StringIO()
-        sys.stdout = captured_output
-        self.calc.lcm(6, 8)
+    def test_mcm(self):
+        # Prueba para el cálculo del MCM
+        salida_capturada = StringIO()
+        sys.stdout = salida_capturada
+        self.calc.mcm(6, 8)
         sys.stdout = sys.__stdout__
-        self.assertIn("24", captured_output.getvalue())
+        self.assertIn("24", salida_capturada.getvalue())
 
-    def test_gcd(self):
-        # Test GCD calculation
-        captured_output = StringIO()
-        sys.stdout = captured_output
-        self.calc.gcd(36, 60)
+    def test_mcd(self):
+        # Prueba para el cálculo del MCD
+        salida_capturada = StringIO()
+        sys.stdout = salida_capturada
+        self.calc.mcd(36, 60)
         sys.stdout = sys.__stdout__
-        self.assertIn("12", captured_output.getvalue())
+        self.assertIn("12", salida_capturada.getvalue())
 
-    def test_rest_of_division(self):
-        # Test rest of division
-        captured_output = StringIO()
-        sys.stdout = captured_output
-        self.calc.rest_of_division(10, 3)
+    def test_resto_division(self):
+        # Prueba para el resto de la división
+        salida_capturada = StringIO()
+        sys.stdout = salida_capturada
+        self.calc.resto_division(10, 3)
         sys.stdout = sys.__stdout__
-        self.assertIn("1", captured_output.getvalue())
+        self.assertIn("1", salida_capturada.getvalue())
 
-    def test_invalid_input(self):
-        # Test invalid input for functions
-        captured_output = StringIO()
-        sys.stdout = captured_output
-        self.calc.add([1, "a", 3])  # Will raise a ValueError
+    def test_entrada_invalida(self):
+        # Prueba para entrada no válida en las funciones
+        salida_capturada = StringIO()
+        sys.stdout = salida_capturada
+        self.calc.sumar([1, "a", 3])  # Provocará un ValueError
         sys.stdout = sys.__stdout__
-        self.assertIn("Invalid input", captured_output.getvalue())
+        self.assertIn("Error: Entrada no válida", salida_capturada.getvalue())
 
-# Run the tests
+# Ejecutar las pruebas
 if __name__ == '__main__':
     unittest.main()
