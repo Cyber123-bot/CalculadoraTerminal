@@ -6,7 +6,7 @@
 Si encuentras un error o quieres sugerir una nueva característica, abre un problema en [GitHub](https://github.com/Cyber123-bot/CalculadoraTerminal/issues).
 
 ## Sugerir Mejoras
-Si tienes una idea para mejorar el proyecto, abre un problema o únete a nuestras discusiones en GitHub.
+Si tienes una idea para mejorar el proyecto no dudes en contactarme a mi correo [cyber123.bot@gmail.com].
 
 ## Enviar Pull Requests
 Sigue estos pasos para enviar un pull request:
