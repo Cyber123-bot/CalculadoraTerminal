@@ -63,7 +63,7 @@ class TestCalculadora(unittest.TestCase):
         # Prueba para el cálculo de la raíz cuadrada
         salida_capturada = StringIO()
         sys.stdout = salida_capturada
-        self.calc.raiz_cuadrada(16)
+        self.calc.raizCuadrada(16)
         sys.stdout = sys.__stdout__
         self.assertIn("4.0", salida_capturada.getvalue())
 
@@ -71,7 +71,7 @@ class TestCalculadora(unittest.TestCase):
         # Prueba para el cálculo de la raíz cúbica
         salida_capturada = StringIO()
         sys.stdout = salida_capturada
-        self.calc.raiz_cubica(27)
+        self.calc.raizCubica(27)
         sys.stdout = sys.__stdout__
         self.assertIn("3.0", salida_capturada.getvalue())
 
@@ -103,7 +103,7 @@ class TestCalculadora(unittest.TestCase):
         # Prueba para el resto de la división
         salida_capturada = StringIO()
         sys.stdout = salida_capturada
-        self.calc.resto_division(10, 3)
+        self.calc.restoDivision(10, 3)
         sys.stdout = sys.__stdout__
         self.assertIn("1", salida_capturada.getvalue())
 

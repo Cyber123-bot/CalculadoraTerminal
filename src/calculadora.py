@@ -105,7 +105,7 @@ class Calculadora:
 
         print(self.__texto, total)  # Muestra el resultado con el texto opcional
 
-    def raiz_cuadrada(self, arg):
+    def raizCuadrada(self, arg):
         '''
         Esta función calcula la raíz cuadrada del argumento proporcionado y muestra el resultado.
         '''
@@ -120,7 +120,7 @@ class Calculadora:
 
         print(self.__texto, suposicion)  # Muestra la raíz cuadrada del argumento con el texto opcional
 
-    def raiz_cubica(self, arg):
+    def raizCubica(self, arg):
         '''
         Esta función calcula la raíz cúbica del argumento proporcionado y muestra el resultado.
         '''
@@ -174,7 +174,7 @@ class Calculadora:
         print(self.__texto, n1)  # Muestra el máximo común divisor con el texto opcional
 
        
-    def resto_division(self, n1, n2):
+    def restoDivision(self, n1, n2):
         '''
         Esta función calcula el resto de la división de dos números y muestra el resultado.
         '''
@@ -189,7 +189,7 @@ class Calculadora:
         
         print(self.__texto, resultado)  # Muestra el resultado con el texto opcional
 
-    def iniciar_programa(self):
+    def iniciarPrograma(self):
         '''
         Esta función inicia el programa de la calculadora y solicita al usuario elegir una operación.
         '''

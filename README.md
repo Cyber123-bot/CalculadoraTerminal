@@ -46,10 +46,10 @@ Este proyecto es una calculadora simple en Python que realiza varias operaciones
   - `resta`: Resta una lista de números secuencialmente e imprime el resultado.
   - `division`: Divide el primer número por los números subsecuentes e imprime el resultado.
   - `multiplicacion`: Multiplica una lista de números e imprime el resultado.
-  - `raiz_cuadrada`: Calcula e imprime la raíz cuadrada de un número usando el método de Newton.
-  - `raiz_cubica`: Calcula e imprime la raíz cúbica de un número.
+  - `raizCuadrada`: Calcula e imprime la raíz cuadrada de un número usando el método de Newton.
+  - `raizCubica`: Calcula e imprime la raíz cúbica de un número.
   - `potencia`: Eleva una base a un exponente e imprime el resultado.
   - `mcm`: Calcula e imprime el mínimo común múltiple de dos números.
   - `mcd`: Calcula e imprime el máximo común divisor de dos números usando el algoritmo de Euclides.
-  - `resto_division`: Calcula e imprime el resto de la división de dos números.
-  - `iniciar_programa`: Inicia el programa de la calculadora, muestra un menú de operaciones y solicita la entrada del usuario.
+  - `restoDivision`: Calcula e imprime el resto de la división de dos números.
+  - `iniciarPrograma`: Inicia el programa de la calculadora, muestra un menú de operaciones y solicita la entrada del usuario.
