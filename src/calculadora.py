@@ -171,8 +171,7 @@ class Calculadora:
         while n2 != 0:
             n1, n2 = n2, n1 % n2  # Intercambia n1 con n2 y asigna a n2 el residuo de n1 dividido por n2
     
-        # Muestra el resultado junto con cualquier texto adicional si es necesario
-        print(self.__texto, n1)  # El valor final de n1 es el MCD
+        print(self.__texto, n1)  # Muestra el máximo común divisor con el texto opcional
 
        
     def resto_division(self, n1, n2):
@@ -188,7 +187,7 @@ class Calculadora:
         except ValueError:
             print(self.__texto, "Error: Entrada no válida.")  # Maneja entradas no válidas
         
-        print(self.__texto, resultado)
+        print(self.__texto, resultado)  # Muestra el resultado con el texto opcional
 
     def iniciar_programa(self):
         '''
