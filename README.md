@@ -15,6 +15,7 @@ Este proyecto es una calculadora simple en Python que realiza varias operaciones
 - **MCD (Máximo Común Divisor)**: Encuentra el máximo común divisor de dos números.
 - **Porcentaje**: Calcula el porcentaje de un número relativo a otro.
 - **Factorización Prima**: Descompone un número en sus factores primos.
+- **Resto de la división**: Devuelve el resto de la división
 
 ## Uso
 
