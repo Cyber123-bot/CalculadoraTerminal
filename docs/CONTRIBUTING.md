@@ -3,7 +3,7 @@
 ¡Gracias por tu interés en contribuir a CalculadoraTerminal! Aquí hay algunas formas en las que puedes ayudar:
 
 ## Reportar Problemas
-Si encuentras un error o quieres sugerir una nueva característica, abre un problema en [GitHub](https://github.com/Cyber123-bot/CalculadoraTerminal/issues).
+Si encuentras un error o quieres sugerir una nueva característica, abre un issue en [GitHub](https://github.com/Cyber123-bot/CalculadoraTerminal/issues).
 
 ## Sugerir Mejoras
 Si tienes una idea para mejorar el proyecto no dudes en contactarme a mi correo [cyber123.bot@gmail.com].
@@ -25,5 +25,6 @@ Asegúrate de que tu código pase todas las pruebas unitarias antes de enviar un
 ## Contactarme
 Si tienes alguna pregunta, sugerencia o quieres conectarte, no dudes en contactarme por correo electrónico a [cyber123.bot@gmail.com].
 
+---
 ¡Gracias por contribuir!
 
