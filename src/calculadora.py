@@ -524,3 +524,7 @@ class Calculadora:
             except ValueError:
                 print(estilos.color.rojo + "\nEntrada no válida." + estilos.color.RESET)
                 return
+
+if __name__ == "__main__":
+    calc = Calculadora()
+    calc.iniciarPrograma()
